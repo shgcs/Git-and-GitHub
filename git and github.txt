@@ -1,4 +1,4 @@
-git and github
+                                         git and github
 new repository
 readme.md: used to write information
 add = used to add file
