@@ -1,0 +1,125 @@
+git and github
+new repository
+readme.md: used to write information
+add = used to add file
+commit = wants to change through to message and we can used html in commit
+~ means root/main folder
+remote/global :github
+local:laptop,pc
+q:q for quit 
+M:you modified this file and need to add and commit it 
+U:this is untracked file
+A:file added
+untracked files:git not tracking to this files
+modified:you change the file
+staged: file is ready to be commited
+unmodified: you not change the file
+general workflow:github repo --> clone --> changes --> add --> commit --> push
+
+commands (git bash,code editior):
+
+git --version :used to check version of git
+git config --global user.name "my name":used to set name to access git
+git config ---global user.email "someone@email.com":used to set email to access git
+git config --list
+
+
+for local to remote -->
+copy the http link through github code 
+git clone https://github.com/repository_name.git:used to access a github repository clone in local machine
+cd folder_name: used to change directory/folder or for going in folder 
+cd ..:used to for going out of folder
+clear: used to clear the commands
+ls:used to display all listed files in current folder
+ls -a :used to display all hidden files and in that .git means this is git repository
+
+
+git status:used to display status of code
+if we change the code in file or add the new file
+git add file_name:used to add file
+git add .:used to add all files from folder
+git commit -m "some_message":used to be commit or some message
+git log:used to display all commits
+git push origin main:used to push code on remote/github and (main is the branch name) (origin is the name of repository and github repo path included in that) 
+
+
+if wants to create new repo on local machine
+we can't upload/push this local repo directly on remote/github.to do that we need to create again new repo on github then we can upload/push this folder files only
+mkdir local_repo_name: used to create new directory/folder
+git init:used to create a new git repo on local machine
+then create new repo on github
+git remote add origin https://github.com/git_repo_name :used to add origin
+git remote -v:used to check remote
+git branch:used to check current branch
+git branch -M new_branch_name:used to rename the branch
+git push -u origin main:used to set upstream after that we can used just "git push" 
+
+
+there can be multiple git branches then this multiple branches can do merge with main branch
+git checkout another_branch_name:used to go in another branch or shift on another branch
+git checkout -b new_branch_name:used to create new branch
+git branch -d branch_name:used to delete branch
+
+
+if wants to merge then
+way 1(through local machine):
+git diff main:used to check and compare differences with commits,branches,files and to others
+git merge main:used to merge the 2 branches
+way 2(using github):
+create a "pull request" to merge two branches
+
+if we merge on github then
+git pull origin main:used to fetch and download content from the github repo in local machine or replicate the changes form github to local machine
+git pull:used to replicate the changes form github to local machine
+
+if we changes in two branches at a time then "merge conflicts" occured
+for resolving merge conflicts then 
+git status
+git add .
+git commit -m "some_message"
+git diff main
+git checkout main
+git merge another_branch_name
+git push OR git push origin main
+ 
+
+
+undoing changes
+case 1:if changes in "staged changes"
+git reset file_name:used to reset file
+git reset:used to reset all files
+case 2:if changes in "commited changes"(for one commit)
+git reset HEAD~1:used to reset HEAD/last commit and go on 1 step behind
+case 3:if changes in "commited changes"(for multiple commits)
+git reset commit_hash(can fetch thruogh git log):used to reset commit and go on n number of  commits behind through commit hash
+git reset --hard commit_hash(can fetch through git log):used to reset all remaining commits and go on n number of commits behind through commit hash
+
+
+fork
+it is a new repository and fetch another repo into our account
+we can fork on github
+if we did changes in fork repo
+and then can commit changes on github
+then we can merge to this repo with original repo of another person/community on github through new pull request to give the our changes in main/original repository 
+
+
+
+
+
+
+github to local
+git pull origin main
+git pull 
+
+local to github
+git clone "https://..."  or git remote add origin "https://..."
+git add .
+git commit -m "..."
+git push origin main or git push 
+
+
+
+
+
+
+
