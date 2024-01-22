@@ -40,7 +40,7 @@ git add file_name:used to add file
 git add .:used to add all files from folder
 git commit -m "some_message":used to be commit or some message
 git log:used to display all commits
-git push origin main:used to push code on remote/github and (main is the branch name) (origin is the name of repository and github repo path included in that) 
+git push origin_name branch_name:used to push code on remote/github and (main is the branch name) (origin is the name of repository and github repo path included in that) 
 
 
 if wants to create new repo on local machine
@@ -48,11 +48,13 @@ we can't upload/push this local repo directly on remote/github.to do that we nee
 mkdir local_repo_name: used to create new directory/folder
 git init:used to create a new git repo on local machine
 then create new repo on github
-git remote add origin https://github.com/git_repo_name :used to add origin
-git remote -v:used to check remote
+git remote add new_origin_name https://github.com/git_repo_name :used to add origin
+git remote rename old_origin_name new_origin_name:used to rename the origin
+git remote remove origin_name:used to delete origin
+git remote -v:used to check remote and verify the changes
 git branch:used to check current branch
 git branch -M new_branch_name:used to rename the branch
-git push -u origin main:used to set upstream after that we can used just "git push" 
+git push -u origin_name branch_name:used to set upstream after that we can used just "git push" 
 
 
 there can be multiple git branches then this multiple branches can do merge with main branch
@@ -63,13 +65,13 @@ git branch -d branch_name:used to delete branch
 
 if wants to merge then
 way 1(through local machine):
-git diff main:used to check and compare differences with commits,branches,files and to others
-git merge main:used to merge the 2 branches
+git diff branch_name:used to check and compare differences with commits,branches,files and to others
+git merge branch_name:used to merge the 2 branches
 way 2(using github):
 create a "pull request" to merge two branches
 
 if we merge on github then
-git pull origin main:used to fetch and download content from the github repo in local machine or replicate the changes form github to local machine
+git pull origin_name branch_name:used to fetch and download content from the github repo in local machine or replicate the changes form github to local machine
 git pull:used to replicate the changes form github to local machine
 
 if we changes in two branches at a time then "merge conflicts" occured
@@ -77,10 +79,10 @@ for resolving merge conflicts then
 git status
 git add .
 git commit -m "some_message"
-git diff main
-git checkout main
+git diff branch_name
+git checkout another_branch_name
 git merge another_branch_name
-git push OR git push origin main
+git push OR git push origin_name branch_name
  
 
 
@@ -108,17 +110,20 @@ then we can merge to this repo with original repo of another person/community on
 
 
 github to local
-git pull origin main
+git pull origin_name branch_name
 git pull 
 
 local to github
-git clone "https://..."  or git remote add origin "https://..."
+git clone "https://..."  or git remote add new_origin_name "https://..."  
 git add .
 git commit -m "..."
-git push origin main or git push 
+git push origin_name branch_name or git push  
 
 
 
+bydefault branch name is main in github
+bydefault branch name is master in git
+bydefault origin name is origin in github and git
 
 
 
