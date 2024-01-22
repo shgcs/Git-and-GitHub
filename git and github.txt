@@ -127,4 +127,12 @@ bydefault origin name is origin in github and git
 
 
 
+github to local
+git pull origin main
+git pull 
 
+local to github
+git clone "https://..."  or git remote add origin "https://..."  
+git add .
+git commit -m "..."
+git push origin main or git push  
